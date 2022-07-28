@@ -3,8 +3,7 @@ package lenny
 type Mood int64
 
 const (
-    Undefined Mood = iota
-    Happy
+    Happy Mood = iota
     Sad
     Angry
     Strange
@@ -24,16 +23,16 @@ func (m Mood) String() string {
     return "unknown"
 }
 
-type identifier struct {
+type Identifier struct {
     name string
     mood Mood
 }
 
-type lenny struct {
+type Lenny struct {
     leftEye     string
     rightEye    string
     leftEnd     string
     rightEnd    string
     mouth       string
-    identifiers []identifier
+    identifiers []Identifier
 }
