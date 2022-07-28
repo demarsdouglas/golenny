@@ -29,10 +29,10 @@ type Identifier struct {
 }
 
 type Lenny struct {
-    leftEye     string
-    rightEye    string
-    leftEnd     string
-    rightEnd    string
-    mouth       string
-    identifiers []Identifier
+    leftEye    string
+    rightEye   string
+    leftEnd    string
+    rightEnd   string
+    mouth      string
+    identifier Identifier
 }
