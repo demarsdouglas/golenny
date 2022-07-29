@@ -35,7 +35,7 @@ type Lenny struct {
     name     string
 }
 
-func LoadDefault() *Lenny {
+func (l Lenny) LoadDefault() *Lenny {
     return &Lenny{
         leftEye:  " ͡°",
         rightEye: "͡°",
