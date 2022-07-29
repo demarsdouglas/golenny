@@ -1,5 +1,7 @@
 package lenny
 
+import "fmt"
+
 type Mood int64
 
 const (
@@ -31,4 +33,22 @@ type Lenny struct {
     mouth    string
     mood     Mood
     name     string
+}
+
+func LoadDefault() *Lenny {
+    return &Lenny{
+        leftEye:  " ͡°",
+        rightEye: "͡°",
+        leftEnd:  "(",
+        rightEnd: ")",
+        mouth:    " ͜ʖ ",
+        mood:     Happy,
+        name:     "Lenny",
+    }
+}
+
+func (l Lenny) Render() string {
+    return fmt.Sprintf(
+        "%s%s%s%s%s", l.leftEnd, l.leftEye, l.mouth, l.rightEye, l.rightEnd,
+    )
 }
