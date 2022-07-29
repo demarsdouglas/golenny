@@ -23,3 +23,4 @@ This project is far from complete!
 - I want to be able to return a random predefined Lenny
 - I want to be able to return a new randomized Lenny
 - I want to be able to return a Lenny based off its mood
+- "Getting started" and related documentation
