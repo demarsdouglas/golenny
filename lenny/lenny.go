@@ -23,16 +23,12 @@ func (m Mood) String() string {
     return "unknown"
 }
 
-type Identifier struct {
-    name string
-    mood Mood
-}
-
 type Lenny struct {
-    leftEye    string
-    rightEye   string
-    leftEnd    string
-    rightEnd   string
-    mouth      string
-    identifier Identifier
+    leftEye  string
+    rightEye string
+    leftEnd  string
+    rightEnd string
+    mouth    string
+    mood     Mood
+    name     string
 }
