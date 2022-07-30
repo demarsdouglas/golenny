@@ -13,6 +13,27 @@ $ cd <project path>
 $ go get github.com/demarsdouglas/golenny
 ```
 
+## Example use
+
+In your project somewhere:
+```go
+func main() {
+    l := lenny.LoadDefault()
+    fmt.Println(l.Render())
+}
+```
+
+Outputs:
+```go
+( ͡° ͜ʖ ͡°)
+```
+
+`LoadDefault()` will load the old-fashioned lenny face struct into the var, and calling `.Render()` from
+that type it will render the face into a string format.
+
+It is of note that Lenny does _not_ look as good in monospaced fonts as he does in other
+spaces (emails, messages, forum posts, documents, etc).
+
 ## TO-DOs:
 
 This project is far from complete!
