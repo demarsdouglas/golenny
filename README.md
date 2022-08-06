@@ -57,7 +57,7 @@ attribute in their struct, but you're more than able to assign those values if n
 
 We have three other functions you can call as well; `LoadPredefinedByName(name string)`, `LoadRandomPredefined()`,
 and `LoadRandomPredefinedByMood(mood Mood)`. A list of named Lennys is coming soon if you don't want to peruse the
-source code. The `Mood`s you're allowed to pass into the latter are `Happy`, `Sad`, `Strange`, `Angry, and `Surprised`.
+source code. The `Mood`s you're allowed to pass into the latter are `Happy`, `Sad`, `Strange`, `Angry`, and `Surprised`.
 
 ```go
 func main() {
