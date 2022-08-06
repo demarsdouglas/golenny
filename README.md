@@ -83,8 +83,5 @@ Outputs:
 
 This project is far from complete!
 
-- I need a large list of predefined Lennys
-- I want to be able to return a predefined Lenny by its name
-- I want to be able to return a random predefined Lenny
-- I want to be able to return a Lenny based off its mood
+- I need a larger list of predefined Lennys
 - "Getting started" and related documentation
