@@ -52,7 +52,7 @@ Outputs:
 ```
 
 These Lennys will be entirely randomized off a few preset lists of possible eyes, mouths, and ends. Some of them are
-fantastic, like the one above. Some of them are absolute abominations. They do _not_ come with a `Mood`or `name`
+fantastic, like the one above. Some of them are absolute abominations. They do _not_ come with a `Mood` or `name`
 attribute in their struct, but you're more than able to assign those values if needed.
 
 ## TO-DOs:
