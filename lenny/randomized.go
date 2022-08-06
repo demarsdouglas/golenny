@@ -1,6 +1,11 @@
 package lenny
 
-var Eyes = [][]string{
+import (
+	"math/rand"
+	"time"
+)
+
+var eyes = [][]string{
 	{"⌐■", "■"},
 	{" ͠°", " °"},
 	{"⇀", "↼"},
@@ -86,4 +91,123 @@ var Eyes = [][]string{
 	{"ಠ"},
 	{"σ"},
 	{"☯"},
+}
+
+var mouths = []string{
+	"v",
+	"ᴥ",
+	"ᗝ",
+	"Ѡ",
+	"ᗜ",
+	"Ꮂ",
+	"ᨓ",
+	"ᨎ",
+	"ヮ",
+	"╭͜ʖ╮",
+	" ͟ل͜",
+	" ͜ʖ",
+	" ͟ʖ",
+	" ʖ̯",
+	"ω",
+	" ³",
+	" ε ",
+	"﹏",
+	"□",
+	"ل͜",
+	"‿",
+	"╭╮",
+	"‿‿",
+	"▾",
+	"‸",
+	"Д",
+	"∀",
+	"!",
+	"人",
+	".",
+	"ロ",
+	"_",
+	"෴",
+	"ѽ",
+	"ഌ",
+	"⏠",
+	"⏏",
+	"⍊",
+	"⍘",
+	"ツ",
+	"益",
+	"╭∩╮",
+	"Ĺ̯",
+	"◡",
+	" ͜つ",
+	"ﺪ͟͠",
+}
+
+var ends = [][]string{
+	{"( ͡°( ͡° ͜ʖ( ", " )ʖ ͡°) ͡°)"},
+	{"༼ ºل͟º ༼ ºل͟º ༼ ", " ༽ ºل͟º ༽ ºل͟º ༽"},
+	{"┬─┬ノ( ", "ノ)"},
+	{"̿̿ ̿̿ ̿̿ ̿'̿'\\͇̿̿\\= ( ", " ) =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿"},
+	{"(ノ", ")ノ彡┻━┻"},
+	{"q", "p"},
+	{"(ง", ")ง"},
+	{"ʢ", "ʡ"},
+	{"⸮", "?"},
+	{"ʕ", "ʔ"},
+	{"ᖗ", "ᖘ"},
+	{"ᕦ", "ᕥ"},
+	{"ᕦ(", ")ᕥ"},
+	{"ᕙ(", ")ᕗ"},
+	{"ᘳ", "ᘰ"},
+	{"ᕮ", "ᕭ"},
+	{"ᕳ", "ᕲ"},
+	{"(", ")"},
+	{"{", "}"},
+	{"¯\\_", "_/¯"},
+	{"୧", "୨"},
+	{"୨", "୧"},
+	{"⤜(", ")⤏"},
+	{"☞", "☞"},
+	{"ᑫ", "ᑷ"},
+	{"ᑴ", "ᑷ"},
+	{"ヽ(", ")ﾉ"},
+	{"\\(", ")/"},
+	{"乁(", ")ㄏ"},
+	{"└{", "}┘"},
+	{"(づ", ")づ"},
+	{"(ง", ")ง"},
+	{"⎝", "⎠"},
+	{"ლ(", "ლ)"},
+	{"ლ,ᔑ", "ᔐ.ლ"},
+	{"ᕕ(", ")ᕗ"},
+	{"(∩", ")⊃━☆ﾟ.*"},
+	{"|"},
+}
+
+func LoadRandom() *Lenny {
+	var randLenny Lenny
+
+	rand.Seed(time.Now().Unix())
+	randEyes := eyes[rand.Intn(len(eyes))]
+	randMouth := mouths[rand.Intn(len(mouths))]
+	randEnds := ends[rand.Intn(len(ends))]
+
+	randLenny.mouth = randMouth
+
+	if len(randEyes) == 2 {
+		randLenny.leftEye = randEyes[0]
+		randLenny.rightEye = randEyes[1]
+	} else {
+		randLenny.leftEye = randEyes[0]
+		randLenny.rightEye = randEyes[0]
+	}
+
+	if len(randEnds) == 2 {
+		randLenny.leftEnd = randEnds[0]
+		randLenny.rightEnd = randEnds[1]
+	} else {
+		randLenny.leftEnd = randEnds[0]
+		randLenny.rightEnd = randEnds[0]
+	}
+
+	return &randLenny
 }
