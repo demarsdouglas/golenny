@@ -19,8 +19,8 @@ In your project somewhere:
 
 ```go
 func main() {
-l := lenny.LoadDefault()
-fmt.Println(l.Render())
+    l := lenny.LoadDefault()
+    fmt.Println(l.Render())
 }
 ```
 
@@ -40,8 +40,8 @@ You may also want to generate a randomized Lenny, and this can be done in the sa
 
 ```go
 func main() {
-l := lenny.LoadRandom()
-fmt.Println(l.Render())
+    l := lenny.LoadRandom()
+    fmt.Println(l.Render())
 }
 ```
 
@@ -54,6 +54,30 @@ Outputs:
 These Lennys will be entirely randomized off a few preset lists of possible eyes, mouths, and ends. Some of them are
 fantastic, like the one above. Some of them are absolute abominations. They do _not_ come with a `Mood` or `name`
 attribute in their struct, but you're more than able to assign those values if needed.
+
+We have three other functions you can call as well; `LoadPredefinedByName(name string)`, `LoadRandomPredefined()`,
+and `LoadRandomPredefinedByMood(mood Mood)`. A list of named Lennys is coming soon if you don't want to peruse the
+source code. The `Mood`s you're allowed to pass into the latter are `Happy`, `Sad`, `Strange`, `Angry, and `Surprised`.
+
+```go
+func main() {
+    l1 := lenny.LoadPredefinedByName("Lenny")
+    l2 := lenny.LoadRandomPredefinedByMood(lenny.Strange)
+    l3 := lenny.LoadRandomPredefined()
+    
+    fmt.Println(l1.Render())
+    fmt.Println(l2.Render())
+    fmt.Println(l3.Render())
+}
+```
+
+Outputs:
+
+```
+( ͡° ͜ʖ ͡°)
+ᕦ⊙෴⊙ᕤ
+(◞д◟)
+```
 
 ## TO-DOs:
 
